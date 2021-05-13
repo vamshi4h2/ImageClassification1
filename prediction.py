@@ -15,8 +15,8 @@ def image(path):
     return new_arr
 print("enter the image name with the extension:",end="")
 x=input()
-IMAGE=os.path.join(r'C:\Users\vamshi\PycharmProjects\ImageRecognition\Test',x)
-model = keras.models.load_model(r'C:\Users\vamshi\PycharmProjects\ImageRecognition\trained.model')
+IMAGE=os.path.join(r'C:\Users\vamshi\PycharmProjects\ImageClassification\Test',x)
+model = keras.models.load_model(r'C:\Users\vamshi\PycharmProjects\ImageClassification\trained.model')
 prediction = model.predict([image(IMAGE)])
 
 

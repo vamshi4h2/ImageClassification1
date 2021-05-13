@@ -3,10 +3,10 @@ import matplotlib.pyplot as plt
 import cv2
 import os
 
-Datadir=r"C:\Users\vamshi\PycharmProjects\ImageRecognition\PetImages/"
+Datadir=r"C:\Users\vamshi\PycharmProjects\ImageClassification\PetImages/"
 
 CATAGORIES=["cat","dog"]
-#r"C:\Users\vamshi\PycharmProjects\ImageRecognition\PetImages/cat or dog"
+#r"C:\Users\vamshi\PycharmProjects\ImageClassification\PetImages/"
 for i in CATAGORIES:
     path=os.path.join(Datadir,i)
     for img in os.listdir(path):
@@ -57,10 +57,10 @@ X=np.array(X).reshape(-1,img_size,img_size,1)
 
 import pickle
 
-pickle_out=open(r"C:\Users\vamshi\PycharmProjects\ImageRecognition\X.pickle","wb")
+pickle_out=open(r"C:\Users\vamshi\PycharmProjects\ImageClassification\X.pickle","wb")
 pickle.dump(X,pickle_out)
 pickle_out.close()
 
-pickle_out=open(r"C:\Users\vamshi\PycharmProjects\ImageRecognition\y.pickle","wb")
+pickle_out=open(r"C:\Users\vamshi\PycharmProjects\ImageClassification\y.pickle","wb")
 pickle.dump(y,pickle_out)
 pickle_out.close()
